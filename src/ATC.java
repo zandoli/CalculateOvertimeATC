@@ -5,8 +5,8 @@ import java.text.DecimalFormat;
 
 public class ATC {
     private static double ovr(double sal, double hrs, double hrswh, double mls){
-        double x = (sal/20/6/4)*hrs*4*2.5;
-        double y = (sal/20/6/4)*hrswh*4*3;
+        double x = (sal/20/6)*hrs*2.5;
+        double y = (sal/20/6)*hrswh*3;
         return x+y+ mls*32;
     }
     public static void main(String[] args)throws IOException {
