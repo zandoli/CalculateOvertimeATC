@@ -3,12 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 
-public class ATC {
-    private static double ovr(double sal, double hrs, double hrswh, double mls){
-        double x = (sal/20/6)*hrs*2.5;
-        double y = (sal/20/6)*hrswh*3;
-        return x+y+ mls*32;
-    }
+class ATC{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -28,8 +23,10 @@ public class ATC {
         String input4 = br.readLine();
         double mls = Double.parseDouble(input4);
 
+        Overtime o = new Overtime();
+        //o.ovr(sal,hrs,hrswh,mls);
         DecimalFormat num2Places = new DecimalFormat("##.00");
-        String overtime = "$" + num2Places.format(ovr(sal, hrs, hrswh, mls));
-        System.out.println("Overtime to be paid: " + overtime);
+        String total = "$" + num2Places.format(o.ovr(sal,hrs,hrswh,mls));
+        System.out.println("Overtime to be paid: " + total);
     }
 }
