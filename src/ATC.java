@@ -9,7 +9,7 @@ public class ATC {
         double y = (sal/20/6)*hrswh*3;
         return x+y+ mls*32;
     }
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Enter base salary: ");
@@ -29,7 +29,7 @@ public class ATC {
         double mls = Double.parseDouble(input4);
 
         DecimalFormat num2Places = new DecimalFormat("##.00");
-        String overtime = "$" + num2Places.format(ovr(sal,hrs,hrswh,mls));
-        System.out.println("Overtime to be paid: "+overtime);
+        String overtime = "$" + num2Places.format(ovr(sal, hrs, hrswh, mls));
+        System.out.println("Overtime to be paid: " + overtime);
     }
 }
