@@ -1,4 +1,4 @@
-public class Overtime {
+class Overtime {
     double ovr(double sal, double hrs, double hrswh, double mls) {
         double x = (sal / 20 / 6) * hrs * 2.5;
         double y = (sal / 20 / 6) * hrswh * 3;
